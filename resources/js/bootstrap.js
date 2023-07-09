@@ -3,11 +3,31 @@
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
+import Echo from 'laravel-echo';
+import Pusher from 'pusher-js';
 
 import axios from 'axios';
 window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+
+
+window.Pusher = Pusher;
+
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: process.env.MIX_PUSHER_APP_KEY,
+    cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+    encrypted: true,
+    forceTLS: true,
+});
+
+Echo.private('App.Models.User.' + userId) // Replace 'App.Models.User' with your user model namespace
+    .notification((notification) => {
+        // Handle the notification event here
+        console.log(notification);
+    });
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
