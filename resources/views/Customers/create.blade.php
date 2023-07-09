@@ -1,3 +1,7 @@
+@extends('dashboard.body.main')
+
+
+
 @section('content')
 
 <header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">

@@ -1,5 +1,5 @@
 
-
+@extends('dashboard.body.main')
 
 
 
