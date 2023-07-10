@@ -108,7 +108,7 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button class="btn btn-primary" type="submit">Add Cutomer</button>
+                        <button class="btn btn-primary" type="submit">Save</button>
                         <a class="btn btn-danger" href="{{ route('customers.index') }}">Cancel</a>
                     </div>
                 </div>

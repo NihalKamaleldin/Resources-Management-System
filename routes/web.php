@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\SupplierController;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -19,14 +21,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-//Customer Route
-Route::resource('/customers', CustomerController::class);
-
-
 // Dashboard Route
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->name('dashboard');
+
+//Customer Route
+Route::resource('/customers', CustomerController::class);
+
+//Supplier Route
+Route::resource('/suppliers', SupplierController::class);
 
