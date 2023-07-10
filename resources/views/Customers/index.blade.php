@@ -119,8 +119,7 @@
                         </table>
                     </div>
                 </div>
-
-                {{ $customers->links() }}
+  {{ $customers->links() }} 
             </div>
         </div>
     </div>
