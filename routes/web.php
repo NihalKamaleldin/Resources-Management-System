@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\SupplierController;
-
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ItemController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -33,3 +34,8 @@ Route::resource('/customers', CustomerController::class);
 //Supplier Route
 Route::resource('/suppliers', SupplierController::class);
 
+//Product Route
+Route::resource('/products', ProductController::class);
+
+//Item Route
+Route::resource('/items', ItemController::class);
